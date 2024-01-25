@@ -1,63 +1,63 @@
 [
     {
       "userId": "1a2b3c",
-      "userName": "John Doe",
-      "userEmail": "john@example.com",
-      "userPass": "password1"
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password1"
     },
     {
       "userId": "4d5e6f",
-      "userName": "Jane Smith",
-      "userEmail": "jane@example.com",
-      "userPass": "password2"
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "password2"
     },
     {
       "userId": "7a8b9c",
-      "userName": "Alice Johnson",
-      "userEmail": "alice@example.com",
-      "userPass": "password3"
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "password": "password3"
     },
     {
       "userId": "1f2e3d",
-      "userName": "Bob Anderson",
-      "userEmail": "bob@example.com",
-      "userPass": "password4"
+      "name": "Bob Anderson",
+      "email": "bob@example.com",
+      "password": "password4"
     },
     {
       "userId": "a1b2c3",
-      "userName": "Eva Wilson",
-      "userEmail": "eva@example.com",
-      "userPass": "password5"
+      "name": "Eva Wilson",
+      "email": "eva@example.com",
+      "password": "password5"
     },
     {
       "userId": "4d5e6f",
-      "userName": "Michael Brown",
-      "userEmail": "michael@example.com",
-      "userPass": "password6"
+      "name": "Michael Brown",
+      "email": "michael@example.com",
+      "password": "password6"
     },
     {
       "userId": "7a8b9c",
-      "userName": "Sophia Davis",
-      "userEmail": "sophia@example.com",
-      "userPass": "password7"
+      "name": "Sophia Davis",
+      "email": "sophia@example.com",
+      "password": "password7"
     },
     {
       "userId": "1f2e3d",
-      "userName": "William Martinez",
-      "userEmail": "william@example.com",
-      "userPass": "password8"
+      "name": "William Martinez",
+      "email": "william@example.com",
+      "password": "password8"
     },
     {
       "userId": "a1b2c3",
-      "userName": "Olivia Harris",
-      "userEmail": "olivia@example.com",
-      "userPass": "password9"
+      "name": "Olivia Harris",
+      "email": "olivia@example.com",
+      "password": "password9"
     },
     {
       "userId": "4d5e6f",
-      "userName": "Liam Taylor",
-      "userEmail": "liam@example.com",
-      "userPass": "password10"
+      "name": "Liam Taylor",
+      "email": "liam@example.com",
+      "password": "password10"
     }
   ]
   
