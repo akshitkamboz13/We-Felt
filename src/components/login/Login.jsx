@@ -17,7 +17,7 @@ const Login = () => {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('../../assets/users.json'); // Replace with your API endpoint
+      const response = await fetch('https://mocki.io/v1/e143b00e-f8a3-4fd4-9dd2-2fab882bd62f'); // Replace with your API endpoint
       const data = await response.json();
       console.log('Fetched data:', data);
     } catch (error) {
