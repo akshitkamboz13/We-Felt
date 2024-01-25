@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faCompass, faBell, faUser } from '@fortawesome/free-regular-svg-icons';
+import { faBuilding, faPlusSquare, faBell, faUser } from '@fortawesome/free-regular-svg-icons';
 import './Navbar.css';
 import logo from "./logo/WeFeltLogo.png";
 
@@ -23,7 +23,7 @@ const Navbar = () => {
           
           <li className="nav-item">
             <NavLink to="/explore" className="nav-links">
-              <FontAwesomeIcon icon={faCompass} className='nav-icons' />
+              <FontAwesomeIcon icon={faPlusSquare} className='nav-icons' />
             </NavLink>
           </li>
           <li className="nav-item">

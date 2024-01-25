@@ -1,0 +1,26 @@
+
+.home-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .post-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .post-item {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+  
+  .post-title {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .post-context {
+    margin-top: 10px;
+  }
+  
