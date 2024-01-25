@@ -6,6 +6,7 @@ import './Navbar.css';
 import logo from "./logo/WeFeltLogo.png";
 
 const Navbar = () => {
+  const currentUser = localStorage.getItem('currentUser');
     return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -22,7 +23,7 @@ const Navbar = () => {
           </li>
           
           <li className="nav-item">
-            <NavLink to="/explore" className="nav-links">
+            <NavLink to={currentUser? "/create-post":"/Login"} className="nav-links">
               <FontAwesomeIcon icon={faPlusSquare} className='nav-icons' />
             </NavLink>
           </li>
@@ -32,7 +33,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="/login" className="nav-links">
+            <NavLink to={currentUser? "/Profile":"/Login"} className="nav-links">
               <FontAwesomeIcon icon={faUser} className='nav-icons'  />
             </NavLink>
           </li>

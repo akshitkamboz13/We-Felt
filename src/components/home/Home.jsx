@@ -7,7 +7,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://mocki.io/v1/e143b00e-f8a3-4fd4-9dd2-2fab882bd62f');
+        const response = await fetch('https://mocki.io/v1/7f156d25-5eb6-495c-a0b0-02e30a7a9ed3');
         const data = await response.json();
         setPostData(data);
       } catch (error) {
