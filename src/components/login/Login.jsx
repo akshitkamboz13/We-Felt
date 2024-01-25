@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate instead of useHistory
+import { Link, useNavigate } from 'react-router-dom'; 
 import './Login.css';
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
   const [password, setPassword] = useState('');
   const [isLogin, setIsLogin] = useState(true);
   const [error, setError] = useState('');
-  const navigate = useNavigate(); // Use useNavigate instead of useHistory
+  const navigate = useNavigate(); 
 
   const handleToggle = () => {
     setIsLogin((prev) => !prev);
@@ -22,13 +22,11 @@ const Login = () => {
       const storedUser = JSON.parse(localStorage.getItem('currentUser'));
       if (storedUser && storedUser.email === email && storedUser.pass === password) {
         console.log('Login successful');
-        // Redirect to home after successful login
-        navigate('/home'); // Use navigate instead of history.push
+        navigate('/home'); 
       } else {
         setError('Invalid email or password');
       }
     } else {
-      // Signup logic
       let newUser = {
         name: name,
         email: email,
@@ -37,8 +35,7 @@ const Login = () => {
 
       localStorage.setItem('currentUser', JSON.stringify(newUser));
       console.log('Signup successful');
-      // Redirect to home after successful signup
-      navigate('/home'); // Use navigate instead of history.push
+      navigate('/home'); 
     }
   };
 
