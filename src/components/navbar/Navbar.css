@@ -1,9 +1,13 @@
 /* Navbar.css */
 
 .navbar {
-  background-color: #e5d9f2; /* Change this to your desired background color */
+  background-color: #CAF0F8; /* Change this to your desired background color */
   padding: 10px 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  position: fixed;
+  top: 0%;
+  width: 100%;
 }
 
 .navbar-container {
@@ -15,6 +19,7 @@
 .navbar-logo img {
   width: 100px; /* Adjust the width as needed */
   height: auto;
+  margin-left: 50px;
 }
 
 .nav-menu {
@@ -28,27 +33,19 @@
   margin-right: 20px;
 }
 
-.nav-links {
-  text-decoration: none;
-  color: #7371fc; /* Change this to your desired text color */
-  font-weight: bold;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.nav-links:hover {
-  color: #a594f9; /* Change this to your desired hover color */
-}
-
 .nav-icons {
   font-size: 1.5rem;
-  color: #a594f9; /* Change this to your desired icon color */
+  color: #023E8A; /* Change this to your desired icon color */
   cursor: pointer;
   margin-right: 50px;
-  transition: 0.3s ease;
+  transition: 0.5s ease;
 }
 
-.nav-icons:hover {
+.nav-icons:hover  {
   font-size: 1.7rem;
-  color: #7371FC; /* Change this to your desired icon hover color */
+  color: #03045E; /* Change this to your desired icon hover color */
+}
+.nav-icons.active {
+  font-size: 1.7rem;
+  color: #03045E; /* Change this to your desired active icon color */
 }
