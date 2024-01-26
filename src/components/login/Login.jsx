@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import './Login.css';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import "./Login.css";
 
 const Login = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isLogin, setIsLogin] = useState(true);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleToggle = () => {
     setIsLogin((prev) => !prev);
-    setError('');
+    setError("");
   };
 
   const fetchData = async () => {
     try {
-      const response = await fetch('https://mocki.io/v1/e143b00e-f8a3-4fd4-9dd2-2fab882bd62f'); // Replace with your API endpoint
+      const response = await fetch(
+        "https://mocki.io/v1/e143b00e-f8a3-4fd4-9dd2-2fab882bd62f"
+      ); // Replace with your API endpoint
       const data = await response.json();
-      console.log('Fetched data:', data);
+      console.log("Fetched data:", data);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error("Error fetching data:", error);
     }
   };
 
@@ -29,13 +31,17 @@ const Login = () => {
     e.preventDefault();
     if (isLogin) {
       // Login logic
-      const storedUser = JSON.parse(localStorage.getItem('currentUser'));
-      if (storedUser && storedUser.email === email && storedUser.pass === password) {
-        console.log('Login successful');
+      const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+      if (
+        storedUser &&
+        storedUser.email === email &&
+        storedUser.pass === password
+      ) {
+        console.log("Login successful");
         await fetchData();
-        navigate('/home');
+        navigate("/home");
       } else {
-        setError('Invalid email or password');
+        setError("Invalid email or password");
       }
     } else {
       // Signup logic
@@ -45,36 +51,53 @@ const Login = () => {
         pass: password,
       };
 
-      localStorage.setItem('currentUser', JSON.stringify(newUser));
-      console.log('Signup successful');
+      localStorage.setItem("currentUser", JSON.stringify(newUser));
+      console.log("Signup successful");
       await fetchData();
-      navigate('/home');
+      navigate("/home");
     }
   };
 
   return (
-    <div className='login-sign'>
-      <h1>{isLogin ? 'Login' : 'Sign Up'}</h1>
+    <div className="login-sign">
+      <h1>{isLogin ? "Login" : "Sign Up"}</h1>
       <form onSubmit={handleSubmit}>
         {!isLogin && (
           <label>
-            <input type="text" placeholder='Name' value={name} onChange={(e) => setName(e.target.value)} />
+            <input
+              type="text"
+              placeholder="Name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
           </label>
         )}
         <br />
         <label>
-          <input type="email" placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
         </label>
         <br />
         <label>
-          <input type="password" placeholder='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </label>
         <br />
-        <button type="submit">{isLogin ? 'Login' : 'Sign Up'}</button>
-        {error && <p style={{ color: 'red' }}>{error}</p>}
+        <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
+        {error && <p style={{ color: "red" }}>{error}</p>}
       </form>
-      <p onClick={handleToggle} style={{ cursor: 'pointer' }}>
-        {isLogin ? "Don't have an account? Sign up here." : 'Already have an account? Login here.'}
+      <p onClick={handleToggle} style={{ cursor: "pointer" }}>
+        {isLogin
+          ? "Don't have an account? Sign up here."
+          : "Already have an account? Login here."}
       </p>
     </div>
   );

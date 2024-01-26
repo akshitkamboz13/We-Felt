@@ -1,6 +1,5 @@
-
-import React, { useState, useEffect } from 'react';
-import './Home.css'; 
+import React, { useState, useEffect } from "react";
+import "./Home.css";
 
 const Home = () => {
   const [postData, setPostData] = useState([]);
@@ -8,11 +7,13 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('https://mocki.io/v1/7f156d25-5eb6-495c-a0b0-02e30a7a9ed3');
+        const response = await fetch(
+          "https://mocki.io/v1/7f156d25-5eb6-495c-a0b0-02e30a7a9ed3"
+        );
         const data = await response.json();
         setPostData(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -25,7 +26,7 @@ const Home = () => {
       <ul className="post-list">
         {postData.map((post, index) => (
           <li key={index} className="post-item">
-            <h2>{post.name}</h2>
+            <h2 className="userName">{post.name}</h2>
             <p className="post-title">Title: {post.title}</p>
             <p className="post-context">Context: {post.context}</p>
           </li>

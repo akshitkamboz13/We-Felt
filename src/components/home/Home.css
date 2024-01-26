@@ -1,8 +1,4 @@
 
-.home-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
   
   .post-list {
     list-style: none;
@@ -10,17 +6,22 @@
   }
   
   .post-item {
-    border: 1px solid #ccc;
+    border: 3px solid #03045E;
+    border-radius: 5px;
     margin-bottom: 20px;
     padding: 15px;
   }
   
   .post-title {
+    color: #03045E;
     font-size: 1.2em;
     font-weight: bold;
   }
   
   .post-context {
+    color: #023E8A;
     margin-top: 10px;
   }
-  
+  .userName{
+    color: #03045E;
+  }
