@@ -1,40 +1,50 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBuilding, faPlusSquare, faBell, faUser } from '@fortawesome/free-regular-svg-icons';
-import './Navbar.css';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBuilding,
+  faPlusSquare,
+  faBell,
+  faUser,
+} from "@fortawesome/free-regular-svg-icons";
+import "./Navbar.css";
 import logo from "./logo/WeFeltLogo.png";
 
 const Navbar = () => {
-  const currentUser = localStorage.getItem('currentUser');
-    return (
+  const currentUser = localStorage.getItem("currentUser");
+  return (
     <nav className="navbar">
       <div className="navbar-container">
         <NavLink to="/" className="navbar-logo">
-          <img src={logo} alt="Wefelt" className='logo' />
+          <img src={logo} alt="Wefelt" className="logo" />
         </NavLink>
 
         <ul className="nav-menu">
           <li className="nav-item">
-            
             <NavLink to="/home" className="nav-links">
-              <FontAwesomeIcon icon={faBuilding} className='nav-icons'  />
+              <FontAwesomeIcon icon={faBuilding} className="nav-icons" />
             </NavLink>
           </li>
-          
+
           <li className="nav-item">
-            <NavLink to={currentUser? "/create-post":"/Login"} className="nav-links">
-              <FontAwesomeIcon icon={faPlusSquare} className='nav-icons' />
+            <NavLink
+              to={currentUser ? "/create-post" : "/Login"}
+              className="nav-links"
+            >
+              <FontAwesomeIcon icon={faPlusSquare} className="nav-icons" />
             </NavLink>
           </li>
           <li className="nav-item">
             <NavLink to="/notifications" className="nav-links">
-              <FontAwesomeIcon icon={faBell} className='nav-icons'  />
+              <FontAwesomeIcon icon={faBell} className="nav-icons" />
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to={currentUser? "/Profile":"/Login"} className="nav-links">
-              <FontAwesomeIcon icon={faUser} className='nav-icons'  />
+            <NavLink
+              to={currentUser ? "/Profile" : "/Login"}
+              className="nav-links"
+            >
+              <FontAwesomeIcon icon={faUser} className="nav-icons" />
             </NavLink>
           </li>
         </ul>
