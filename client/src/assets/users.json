@@ -1,0 +1,63 @@
+[
+    {
+      "userId": "1a2b3c",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "password": "password1"
+    },
+    {
+      "userId": "4d5e6f",
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "password2"
+    },
+    {
+      "userId": "7a8b9c",
+      "name": "Alice Johnson",
+      "email": "alice@example.com",
+      "password": "password3"
+    },
+    {
+      "userId": "1f2e3d",
+      "name": "Bob Anderson",
+      "email": "bob@example.com",
+      "password": "password4"
+    },
+    {
+      "userId": "a1b2c3",
+      "name": "Eva Wilson",
+      "email": "eva@example.com",
+      "password": "password5"
+    },
+    {
+      "userId": "4d5e6f",
+      "name": "Michael Brown",
+      "email": "michael@example.com",
+      "password": "password6"
+    },
+    {
+      "userId": "7a8b9c",
+      "name": "Sophia Davis",
+      "email": "sophia@example.com",
+      "password": "password7"
+    },
+    {
+      "userId": "1f2e3d",
+      "name": "William Martinez",
+      "email": "william@example.com",
+      "password": "password8"
+    },
+    {
+      "userId": "a1b2c3",
+      "name": "Olivia Harris",
+      "email": "olivia@example.com",
+      "password": "password9"
+    },
+    {
+      "userId": "4d5e6f",
+      "name": "Liam Taylor",
+      "email": "liam@example.com",
+      "password": "password10"
+    }
+  ]
+  
