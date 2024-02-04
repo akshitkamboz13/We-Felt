@@ -5,12 +5,15 @@ const Home = () => {
   const [postData, setPostData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("http://localhost:3000/posts");
         const data = await response.json();
+        console.log(data);
+
         setPostData(data);
         setLoading(false);
       } catch (error) {
@@ -22,6 +25,28 @@ const Home = () => {
 
     fetchData();
   }, []);
+
+  const handleSave = async (postId) => {
+    try {
+      const response = await fetch(`http://localhost:3000/users/:${postId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          "userId" : currentUser.user._id
+        }),
+      });
+
+      if (response.ok) {
+        console.log(`Post ${postId} saved successfully!`);
+      } else {
+        console.error(`Failed to save post ${postId}:`, response.statusText);
+      }
+    } catch (error) {
+      console.error(`Error saving post ${postId}:`, error);
+    }
+  };
 
   return (
     <div className="home-container">
@@ -40,6 +65,7 @@ const Home = () => {
                 <h2 className="userName">{post.name}</h2>
                 <p className="post-title">Title: {post.title}</p>
                 <p className="post-context">Context: {post.context}</p>
+                <button onClick={() => handleSave(post._id)}>Save</button>
               </li>
             ))}
           </ul>
