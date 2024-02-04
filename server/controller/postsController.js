@@ -27,3 +27,21 @@ exports.createPost = async (req, res, next) => {
       next(error);
     }
   };
+
+  exports.getPostById = async (req, res, next) => {
+    try {
+      const { postId } = req.params;
+  
+      const post = await Post.findById(postId);
+  
+      if (!post) {
+        return res.status(404).json({ message: 'Post not found' });
+      }
+  
+      res.json(post);
+    } catch (error) {
+      console.error("Error fetching post by ID:", error);
+      res.status(500).json({ error: 'Internal Server Error' });
+    }
+  };
+  

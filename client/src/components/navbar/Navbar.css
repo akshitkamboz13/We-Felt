@@ -1,17 +1,21 @@
-/* Navbar styles */
+/* Navbar.css */
+
 .navbar {
-  background: linear-gradient(to right, #3498db, #1abc9c);
+  background-color: #3498db;
   color: #fff;
-  padding: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* Logo styles */
 .navbar-logo {
   text-decoration: none;
+  color: #fff;
 }
 
 .logo {
@@ -19,7 +23,6 @@
   height: auto;
 }
 
-/* Menu styles */
 .nav-menu {
   list-style: none;
   display: flex;
@@ -27,37 +30,39 @@
   margin: 0;
 }
 
-/* Link styles */
+.nav-item {
+  margin-left: 20px;
+}
+
 .nav-links {
   text-decoration: none;
   color: #fff;
   font-size: 1.2em;
-  margin-right: 20px;
-  padding: 10px;
+  transition: color 0.3s ease-in-out;
 }
 
 .nav-links:hover {
   color: #ecf0f1;
 }
 
-/* Icon styles */
 .nav-icons {
   font-size: 1.5em;
+  margin-left: 8px; /* Added margin to space the icon from the text */
 }
 
-/* Responsive styles */
-@media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    text-align: center;
-  }
+/* Authenticated and Unauthenticated Styles */
+.authenticated {
+  background-color: #27ae60;
+}
 
-  .nav-menu {
-    margin-top: 10px;
-  }
+.authenticated .nav-links:hover {
+  color: #2ecc71;
+}
 
-  .nav-links {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
+.unauthenticated {
+  background-color: #e74c3c;
+}
+
+.unauthenticated .nav-links:hover {
+  color: #c0392b;
 }
