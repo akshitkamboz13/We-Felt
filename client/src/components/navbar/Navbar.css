@@ -1,7 +1,7 @@
 /* Navbar.css */
 
 .navbar {
-  background-color: #3498db;
+  background-color: #1d1d1d;
   color: #fff;
   padding: 15px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -15,12 +15,13 @@
 
 .navbar-logo {
   text-decoration: none;
-  color: #fff;
+  color: #0c0c0c;
 }
 
 .logo {
   width: 100px;
   height: auto;
+  filter: drop-shadow(0px 0px 50px #fbffe5);
 }
 
 .nav-menu {
@@ -36,8 +37,9 @@
 
 .nav-links {
   text-decoration: none;
-  color: #fff;
+  color: #717171;
   font-size: 1.2em;
+  filter: drop-shadow(0px 0px 50px #717171);
   transition: color 0.3s ease-in-out;
 }
 
@@ -52,17 +54,21 @@
 
 /* Authenticated and Unauthenticated Styles */
 .authenticated {
-  background-color: #27ae60;
+  border-radius: 5px;
+  border: 5px solid #27ae60;
 }
 
 .authenticated .nav-links:hover {
   color: #2ecc71;
+  filter: drop-shadow(0px 0px 25px #2ecc71);
 }
 
 .unauthenticated {
-  background-color: #e74c3c;
+  border-radius: 5px;
+  border: 5px solid #c0392b;
 }
 
 .unauthenticated .nav-links:hover {
   color: #c0392b;
+  filter: drop-shadow(0px 0px 25px #c0392b);
 }

@@ -63,9 +63,14 @@ const Home = () => {
             {postData.map((post) => (
               <li key={post._id} className="post-item">
                 <h2 className="userName">{post.name}</h2>
-                <p className="post-title">Title: {post.title}</p>
-                <p className="post-context">Context: {post.context}</p>
-                <button onClick={() => handleSave(post._id)}>Save</button>
+                <p
+              className="titlef"
+              style={{ textAlign: "center", color: "#27ae60" }}
+            >
+              <b style={{ fontSize: "1.5rem" }}>Title:</b> {post.title}
+            </p>
+                <p className="post-context"><b>Context:</b> {post.context}</p>
+                <div className="save-button"><button onClick={() => handleSave(post._id)}>Save</button></div>
               </li>
             ))}
           </ul>
