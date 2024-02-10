@@ -6,9 +6,8 @@
   padding: 20px;
 }
 
-h1 {
-  color: #3498db;
-  text-align: center;
+h1{
+  color: #d0d0d0;
 }
 
 .preloader-container {
@@ -16,8 +15,8 @@ h1 {
 }
 
 .preloader {
-  border: 4px solid #f3f3f3;
-  border-top: 4px solid #3498db;
+  border: 4px solid #d0d0d0;
+  border-top: 4px solid #323232;
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -41,29 +40,32 @@ h1 {
 }
 
 .post-item {
-  background-color: #3498db; /* Use the same color as the Navbar */
-  color: #fff; /* Text color white for better visibility on blue background */
-  border: 1px solid #2980b9; /* Slightly darker border color */
-  border-radius: 8px;
-  padding: 15px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
+  margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1d1d1d;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .post-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
 .userName {
-  color: #fff; /* Text color white for better visibility on blue background */
+  color: #c1c1c1; /* Text color white for better visibility on blue background */
   margin-bottom: 8px;
 }
 
 .post-title,
 .post-context {
   margin: 0;
-  color: #ecf0f1; /* Lighter text color */
+  color: #b4b4b4; /* Lighter text color */
   font-size: 18px;
 }
 
 button {
-  background-color: #2980b9; /* Use the same color as the Navbar */
+  background-color: #5b5b5b; /* Use the same color as the Navbar */
   color: #fff;
   padding: 8px 15px;
   border: none;
@@ -76,4 +78,7 @@ button {
 
 button:hover {
   background-color: #1f618d; /* Darker hover color */
+}
+.save-button{
+  text-align: center;
 }
