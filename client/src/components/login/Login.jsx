@@ -96,14 +96,15 @@ const Login = () => {
           />
         </label>
         <br />
-        <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
-        {error && <p style={{ color: "red" }}>{error}</p>}
-      </form>
-      <p onClick={handleToggle} style={{ cursor: "pointer" }}>
+        <div className="createpost-button"> <button type="submit">{isLogin ? "Login" : "Sign Up"}</button> <p onClick={handleToggle} style={{ cursor: "pointer", color: "grey" }}>
         {isLogin
           ? "Don't have an account? Sign up here."
           : "Already have an account? Login here."}
-      </p>
+      </p></div>
+       
+        {error && <p style={{ color: "red" }}>{error}</p>}
+      </form>
+     
     </div>
   );
 };

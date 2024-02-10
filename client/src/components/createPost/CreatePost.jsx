@@ -45,7 +45,7 @@ const CreatePost = () => {
         <textarea value={context} onChange={(e) => setContext(e.target.value)} />
       </label>
       <br />
-      <button onClick={handleCreatePost}>Create Post</button>
+      <div className="createpost-button"><button onClick={handleCreatePost}>Create Post</button></div>
     </div>
   );
 };
